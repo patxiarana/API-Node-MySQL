@@ -1,17 +1,20 @@
 import { Router } from "express";
-import { getEmployees, createEmployee , updateEmployee, deleteEmployee} from "../controllers/employees.controllers.js";
+import { getEmployees, createEmployee , updateEmployee, deleteEmployee, getEmployee} from "../controllers/employees.controllers.js";
 
 const router = Router();
 
 
-router.get('/employes',getEmployees)
+router.get('/employees',getEmployees)
 
-router.post('/employes',createEmployee)
-
-router.put('/employes', updateEmployee)
+router.get('/employees/:id', getEmployee)
 
 
-router.delete('/employes',  deleteEmployee)
+router.post('/employees',createEmployee)
+
+router.put('/employees', updateEmployee)
+
+
+router.delete('/employees',  deleteEmployee)
 
 
 

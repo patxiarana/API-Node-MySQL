@@ -5,7 +5,7 @@ import indexRoute from "./routes/index.route.js"
 const app = express()
 app.use(express.json())
 app.use(indexRoute)
-app.use(employeesRoute)
+app.use('/api',employeesRoute)
 
 
 app.listen(3000)

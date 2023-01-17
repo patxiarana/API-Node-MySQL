@@ -6,6 +6,12 @@ export const getEmployees =  async (req, res) => {
 }
 
 
+
+export const getEmployee =  async (req, res) => {
+   console.log(req.params)
+res.send('obteniendo empleado')
+   }
+
 export const createEmployee = async (req , res) => {
     const {name, salary} = req.body
     const [rows] = await pool.query('INSERT INTO employee (name, salary) VALUES (?, ?)', [name, salary])
